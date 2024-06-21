@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lina - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Pour espacement égal autour des cartes */
+    gap: 20px; /* Espacement entre les cartes */
+    margin: 0 auto; /* Pour centrer le conteneur */
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(30% - 20px); /* 30% de largeur avec ajustement pour le gap */
+    margin-bottom: 20px; /* Espacement en bas de chaque carte */
+    text-align: center;
+}
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card h3 {
+            margin: 15px 0;
+            color: black;
+        }
+        .project-card p {
+            color: black;
+            padding: 0 15px;
+            margin-bottom: 15px;
+        }
+        .project-card a {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            background-color: #35215a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .project-card a:hover {
+            background-color: #0056b3;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+      
+        <nav>
+        <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="Mesprojets.html">Mes projets</a></li>
+            </ul>
+            <button id="btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+</br>
+</br>
+    <h1 class="title"><strong> Mes Projets </strong></h1>
+</br>
+</br>
+</br>
+    <div class="container">
+        <div class="project-card">
+            <h3>Audit d'un site web</h3>
+            <p>C'est un projet réalisé en équipe de 5 personnes, consistant à auditer un site web pour le pilotage des heures des enseignants, et à présenter notre travail sous forme de bande dessinée.</p>
+            <p><strong> Aquis :</strong> Travail d'équipe, analyse de site web, déboggage, résolution de problèmes, gestion de projet, créativité</p>
+            <a href="https://jupyter.univ-paris13.fr/~12213513" target="_blank">Voir le site</a>
+            <a href="LesprojetsdeToady.pdf" target="_blank">Voir la bd</a>
+        </div>
+        <div class="project-card">
+            <h3>Création d’un site web pour un musée</h3>
+            <p> C'est un projet réalisé en équipe de 6 personnes, consistant à créer un site web pour le musée de la Musique Philharmonie de
+                Paris à l’aide de JavaScript, HTML, CSS.</p>
+            <p><strong> Aquis :</strong> Développement des compétences en HTML, CSS et JavaScript, maitrise de GitHub, travail d'équipe, sens de l’innovation </p>
+            <a href="" target="_blank">Voir le site</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Création d'un site web de formation en ligne</h3>
+            <p> C'est un projet réalisé en équipe de 6 personnes, consistant à créer un site web de formation en ligne en respectant les exigences du client, à l'aide des langages HTML, CSS et PHP. </p>
+            <p><strong> Aquis :</strong> Développement des compétences en HTML, CSS, JavaScript et PHP, maitrise de l'architecture MVC, recueil des besoins d'un client, travail d'équipe </p>
+            <a href="" target="_blank">Voir le site</a>
+        </div>
+        <div class="project-card">
+            <h3>Rapport de mon stage de 2 mois chez DHL</h3>
+            <p> J'ai effectué un stage de 2mois chez DHL en support et développement informatique.</p>
+            <p><strong> Aquis :</strong> Automatisation des processus en utilisant PowerShell et PowerApps, gestion des incidents, communication interne, travail d'équipe, esprit analytique  </p>
+            <a href="Rapport_de_stage_Bouamlat.pdf" target="_blank">Voir le rapport</a>
+        </div>
+    </div>
+
+
+</br>
+</br>
+</br>
+    <footer>
+        &copy; 2024 Lina Medani. Tous droits réservés.
+        <br>
+        <a href="https://www.linkedin.com/in/lina-medani-5427a3271/" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/linamedani" target="_blank">GitHub</a>
+    </footer>
+
+
+</body>
+<script>
+    const btn= document.getElementById("btn")
+    btn.addEventListener("click", () => {
+        document.querySelector("header ul").classList.toggle("show")
+    })
+</script>
+</html>
