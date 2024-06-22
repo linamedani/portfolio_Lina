@@ -3,130 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lina - Portfolio</title>
+    <title>Mes projets | Lina</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+   
     <style>
-        .title {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .container {
-    width: 80%;
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Pour espacement égal autour des cartes */
-    gap: 20px; /* Espacement entre les cartes */
-    margin: 0 auto; /* Pour centrer le conteneur */
+        /* Styles de base */
+/* Styles de base */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Couleur de fond générale */
+    color: #333; /* Couleur du texte principal */
+    line-height: 1.6;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: palevioletred;
 }
 
-.project-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+header {
+    background-color: #1f2833;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Ajustement pour centrer les éléments */
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #c5c6c7;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffffff;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer les éléments verticalement */
+}
+
+.gap-20 {
+    gap: 20px; /* Espacement entre les éléments empilés */
+}
+
+.wrapper {
+    max-width: 1200px; /* Largeur maximale pour le contenu principal */
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+section#hero {
+    text-align: center;
+    padding: 40px 0;
+   
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section#grid {
+    padding: 40px 0;
+    
+}
+
+.portfolio-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajustement de la taille minimale et maximale des cartes */
+    gap: 20px;
+    justify-content: center; /* Centrer la grille horizontalement */
+}
+a{
+    color: whitesmoke;
+}
+.portfolio-grid li {
+    margin: 0;
+}
+
+.card {
+    position: relative;
+    height: 300px; /* Hauteur des cartes ajustée */
+    width: 100%; /* Largeur des cartes ajustée à 100% */
     overflow: hidden;
-    width: calc(30% - 20px); /* 30% de largeur avec ajustement pour le gap */
-    margin-bottom: 20px; /* Espacement en bas de chaque carte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le titre */
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
     text-align: center;
 }
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .project-card h3 {
-            margin: 15px 0;
-            color: black;
-        }
-        .project-card p {
-            color: black;
-            padding: 0 15px;
-            margin-bottom: 15px;
-        }
-        .project-card a {
-            display: inline-block;
-            margin-bottom: 15px;
-            padding: 10px 20px;
-            background-color: #35215a;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .project-card a:hover {
-            background-color: #0056b3;
-        }
-       
+
+.contact-cta {
+  
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact-cta a {
+    color: palevioletred;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-cta a:hover {
+    color: #ffffff;
+}
+
+footer {
+    background-color: #1f2833;
+    color: #c5c6c7;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: palevioletred;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+
+
+
     </style>
 </head>
 <body>
     <header>
-      
         <nav>
-        <ul>
-                <li><a href="./index.html">Home</a></li>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html">Compétences</a></li>
                 <li><a href="Mesprojets.html">Mes projets</a></li>
             </ul>
-            <button id="btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </nav>
     </header>
-</br>
-</br>
-    <h1 class="title"><strong> Mes Projets </strong></h1>
-</br>
-</br>
-</br>
-    <div class="container">
-        <div class="project-card">
-            <h3>Audit d'un site web</h3>
-            <p>C'est un projet réalisé en équipe de 5 personnes, consistant à auditer un site web pour le pilotage des heures des enseignants, et à présenter notre travail sous forme de bande dessinée.</p>
-            <p><strong> Aquis :</strong> Travail d'équipe, analyse de site web, déboggage, résolution de problèmes, gestion de projet, créativité</p>
-            <a href="https://jupyter.univ-paris13.fr/~12213513" target="_blank">Voir le site</a>
-            <a href="LesprojetsdeToady.pdf" target="_blank">Voir la bd</a>
-        </div>
-        <div class="project-card">
-            <h3>Création d’un site web pour un musée</h3>
-            <p> C'est un projet réalisé en équipe de 6 personnes, consistant à créer un site web pour le musée de la Musique Philharmonie de
-                Paris à l’aide de JavaScript, HTML, CSS.</p>
-            <p><strong> Aquis :</strong> Développement des compétences en HTML, CSS et JavaScript, maitrise de GitHub, travail d'équipe, sens de l’innovation </p>
-            <a href="" target="_blank">Voir le site</a>
-        </div>
 
-        <div class="project-card">
-            <h3>Création d'un site web de formation en ligne</h3>
-            <p> C'est un projet réalisé en équipe de 6 personnes, consistant à créer un site web de formation en ligne en respectant les exigences du client, à l'aide des langages HTML, CSS et PHP. </p>
-            <p><strong> Aquis :</strong> Développement des compétences en HTML, CSS, JavaScript et PHP, maitrise de l'architecture MVC, recueil des besoins d'un client, travail d'équipe </p>
-            <a href="" target="_blank">Voir le site</a>
-        </div>
-        <div class="project-card">
-            <h3>Rapport de mon stage de 2 mois chez DHL</h3>
-            <p> J'ai effectué un stage de 2mois chez DHL en support et développement informatique.</p>
-            <p><strong> Aquis :</strong> Automatisation des processus en utilisant PowerShell et PowerApps, gestion des incidents, communication interne, travail d'équipe, esprit analytique  </p>
-            <a href="Rapport_de_stage_Bouamlat.pdf" target="_blank">Voir le rapport</a>
-        </div>
+    <div class="stack gap-20">
+        <main class="wrapper stack gap-8">
+            <section id="hero">
+                <div class="hero-content">
+                    <h1>Mes projets</h1>
+                    <p>Découvrez ci-dessous les sites que j'ai réalisés</p>
+                </div>
+            </section>
+
+            <section id="grid">
+                <ul class="portfolio-grid">
+                    <li>
+                        <a href="#">
+                            <div class="card">
+                                <span class="title"><a href="iut.html">Site IUT</a></span>
+                                <img src="iut.png" alt="Site iut">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="card">
+                                <span class="title"><a href="lpl.html">Site LPL</a></span>
+                                <img src="lpl.png" alt="Image Lpl">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="card">
+                                <span class="title"><a href="perf.html">Site Perform Vision</a></span>
+                                <img src="perform.png" alt="Site perform vision">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="card">
+                                <span class="title"><a href="portfol.html">Portfolio</a></span>
+                                <img src="por.png" alt="Image portfolio">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <aside class="contact-cta">
+            <a href="mailto:medani.lina2004@gmail.com">Contactez-moi</a>
+        </aside>
     </div>
 
-
-</br>
-</br>
-</br>
     <footer>
-        &copy; 2024 Lina Medani. Tous droits réservés.
-        <br>
-        <a href="https://www.linkedin.com/in/lina-medani-5427a3271/" target="_blank">LinkedIn</a> | 
+        <a href="https://www.linkedin.com/in/lina-medani-5427a3271/" target="_blank">LinkedIn</a> |
         <a href="https://github.com/linamedani" target="_blank">GitHub</a>
     </footer>
-
-
 </body>
-<script>
-    const btn= document.getElementById("btn")
-    btn.addEventListener("click", () => {
-        document.querySelector("header ul").classList.toggle("show")
-    })
-</script>
 </html>

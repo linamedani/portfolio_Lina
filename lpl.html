@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Lina</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    padding-bottom: 2.5rem;
+    background-color: whitesmoke;
+    border-bottom: 4px solid palevioletred;
+}
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color:#333;
+    font-size: 16px;
+}
+
+.back-link i {
+    margin-right: 5px;
+   
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pill {
+    padding: 5px 10px;
+    background-color: palevioletred;
+    color: whitesmoke;
+    border-radius: 20px;
+}
+p{color: #333;}
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.content {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 65px;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 8px;
+    height: 200%;
+    min-height: 200%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+p.izan{
+    color: whitesmoke;
+}
+@media (min-width: 768px) {
+    .back-link {
+        display: inline-block;
+    }
+
+    .details {
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .pill {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <a class="back-link" href="index.html"><i class="fas fa-arrow-left"></i> Retour</a>
+            <Hero title="Titre du projet" align="start">
+                <div class="details">
+                    <div class="tags">
+                        <span class="pill">Design</span>
+                        <span class="pill">Dev</span>
+                    </div>
+                    <p class="description"> J'ai créé ce site durant mon stage. Il utilise du JavaScript, du HTML et du CSS.
+                    </p>
+                </div>
+            </Hero>
+        </div>
+    </header>
+
+    <main class="wrapper">
+        <div class="stack gap-10 content">
+            <img src="lpl.png" alt="Projet 1" class="project-image">
+            <div class="content">
+                <!-- Contenu du projet -->
+                <p class="izan">J'ai créé ce site durant mon stage de deux mois au Laboratoire de Physique des Lasers. J'ai dû créer un site pour présenter les activités et les réalisations, les rapports et les conférences du laboratoire, avec un moyen pour les membres de se connecter afin d'ajouter ou de modifier des informations.</p>
+               
+        </div>
+    </main>
+
+    <footer>
+        <ContactCTA />
+    </footer>
+</body>
+</body>
+</html>
