@@ -228,6 +228,12 @@ h1{
     margin-top: 20px;
     font-size: 1.1rem;
 }
+#podcast-description2 {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    margin-left: 60px;
+}
 
 #podcast-description h3 {
     font-size: 1.8rem;
@@ -257,6 +263,36 @@ h1{
     display: block;
 }
 #podcast-description p,h4{
+    color: #ffffff;
+}
+#podcast-description2 h3 {
+    font-size: 1.8rem;
+    color: palevioletred;
+    margin-bottom: 10px;
+}
+
+#podcast-description2 h4 {
+    font-size: 1.4rem;
+    color: rgb(240, 190, 206);
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#podcast-description2 p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Styles pour cacher la description par défaut */
+#podcast-description2.hidden {
+    display: none;
+}
+
+/* Styles pour afficher la description lorsque le bouton est cliqué */
+#podcast-description2:not(.hidden) {
+    display: block;
+}
+#podcast-description2 p,h4{
     color: #ffffff;
 }
 
@@ -405,6 +441,42 @@ h1{
                     </ul>
                 </div>
             </section>
+            <h6>Cybersécurité : Sommes-nous réellement protégés ?</h6>
+<section id="podcast">
+    <div class="podcast-media">
+        <img src="miniature2.webp" alt="Image de couverture du podcast" class="podcast-cover">
+       
+            <audio controls class="podcast-audio">
+                <source src="podcast2.mp4" type="audio/mp4">
+                Votre navigateur ne supporte pas l'élément audio.
+            </audio>
+            
+        </div>
+    </div>
+    <button class="btn-show-description" onclick="toggleDescription2()">Cliquez pour voir la description du podcast</button>
+    <div id="podcast-description2" class="hidden">
+        <!-- Description du deuxième podcast -->
+       <!-- Description du premier podcast -->
+        <h3>Cyberattaques et Intelligence Artificielle dans les Conflits Modernes</h3>
+        <p>Dans cet épisode, Chemsedine Benhaddou reçoit plusieurs experts pour discuter des enjeux de la cybersécurité et des cyberattaques, un sujet d'actualité qui menace aussi bien les individus que les entreprises. Aux côtés de :</p>
+
+        <h4>Azzedine Hatem, spécialiste en cybersécurité des entreprises</h4>
+        <p>Azzedine Hatem commence par discuter des stratégies à mettre en place au sein des organisations pour prévenir les cyberattaques. Il souligne l'importance de la formation continue des employés, des tests de pénétration réguliers et de l'instauration de politiques de cybersécurité robustes.</p>
+
+        <h4>Loïc Li, expert en protection informatique</h4>
+        <p>Loïc Li met en avant l’évolution des cyberattaques et les menaces majeures comme le phishing, les ransomwares, les attaques DDoS et les vulnérabilités Zero-Day. Il insiste sur la nécessité d’une vigilance accrue, de mises à jour régulières et d’une collaboration entre entreprises et autorités pour renforcer la cybersécurité face à des attaques de plus en plus sophistiquées.</p>
+
+        <h4>Lina Medani, hackeuse éthique</h4>
+        <p>Lina Medani partage des conseils sur la détection proactive des failles de sécurité. Elle met en garde contre les risques liés à l'ingénierie sociale et conseille de toujours vérifier l'authenticité des e-mails avant de cliquer sur des liens ou d'entrer des informations sensibles. Elle recommande également de tester régulièrement la sécurité de ses systèmes grâce à des outils de simulation d'attaque.</p>
+
+        <h4>Yanis Krim, victime d’une cyberattaque</h4>
+        <p>Yanis Krim raconte son expérience personnelle. Il explique comment il a été piraté après avoir cliqué sur un lien malveillant dans un e-mail prétendant venir de sa banque, ce qui a conduit à la perte de plusieurs fonds. Yanis met en lumière la facilité avec laquelle les cybercriminels peuvent exploiter les faiblesses humaines et souligne l'importance d'une vigilance constante face aux cybermenaces.</p>
+
+        <p>Le podcast se conclut avec un rappel sur la nécessité de prévenir, de coopérer à l'échelle internationale et de sensibiliser à la cybersécurité pour mieux se défendre contre les menaces.</p>
+
+    </div>
+</section>
+
             
             
             
@@ -429,6 +501,13 @@ h1{
             description.classList.add('hidden');  // Cache la description
         }
     }
+    function toggleDescription2() {
+        var description2 = document.getElementById('podcast-description2');
+        if (description2.classList.contains('hidden')) {
+            description2.classList.remove('hidden');
+        } else {
+            description2.classList.add('hidden');
+        }}
 </script>
 
 
