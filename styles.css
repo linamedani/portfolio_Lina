@@ -1,221 +1,288 @@
-/* Styles de base */
+/* Reset & Fonts */
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8f9;
     color: #333;
-    line-height: 1.6;
-    font-family: 'Poppins', sans-serif
-   
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-a {
-    color: palevioletred;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: palevioletred;
-}
-
-/* En-tête */
-header {
-    background-color: #1f2833;
-    padding: 20px;
+    line-height: 1.5;
+  }
+  
+  /* Header */
+  header {
+    background: #ffe4ec;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat pour les titres */
-}
-
-
-header nav ul {
-    list-style: none;
-    padding: 0;
+    box-shadow: 0 2px 8px rgba(217,79,112,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #d94f70;
+  }
+  
+  nav {
+    width: 100%;
     display: flex;
-    gap: 20px;
-}
-
-header nav ul li {
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
     margin: 0;
-}
-
-header nav ul li a {
-    color: #c5c6c7;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    color: #333;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 6px 8px;
+    border-radius: 6px;
     transition: background-color 0.3s, color 0.3s;
-}
-
-header nav ul li a:hover {
-    background-color: palevioletred;
-    color: #1f2833;
-}
-
-#btn {
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li a:focus {
+    background-color: #d94f70;
+    color: white;
+    outline: none;
+  }
+  
+  #btn {
     display: none;
     background: none;
     border: none;
-    color: #c5c6c7;
-    font-size: 24px;
+    font-size: 28px;
+    color: #d94f70;
     cursor: pointer;
-}
-
-.show {
-    display: flex !important;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Section principale */
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.s-container {
+  }
+  
+  /* Hero */
+  .hero {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    padding: 60px 40px;
+    background: #fff;
+    animation: fadeIn 1s ease-in;
     gap: 40px;
-}
-
-.s-container .content {
-    max-width: 600px;
-}
-
-.s-container .content .subtitle {
-    color: palevioletred;
+  }
+  
+  .hero .text {
+    flex: 1 1 300px;
+    min-width: 280px;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+    color: #333;
+    margin: 0 0 0.5em;
+  }
+  
+  .hero h1 span {
+    color: #d94f70;
+  }
+  
+  .hero p {
     font-size: 1.2rem;
-}
-
-.s-container .content .title {
-    font-size: 2.5rem;
-    color: whitesmoke;
-}
-
-.s-container .content .description {
-    font-size: 1rem;
-    color: whitesmoke;
-    margin: 20px 0;
-}
-
-.s-container .buttons {
+    margin-top: 0;
+    color: #555;
+  }
+  
+  .hero-buttons {
+    margin-top: 20px;
     display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.s-container .buttons a, .s-container .buttons button {
-    background-color: #1f2833;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    gap: 18px;
+  }
+  
+  .btn {
+    background: #d94f70;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
     text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.s-container .buttons a:hover, .s-container .buttons button:hover {
-    background-color: palevioletred;
-    color: #1f2833;
-}
-
-.s-container .image img {
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+    box-shadow: 0 6px 15px rgba(217,79,112,0.3);
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background: #b8405a;
+    outline: none;
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    border: 2px solid #d94f70;
+    color: #d94f70;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: none;
+  }
+  
+  .btn-secondary:hover,
+  .btn-secondary:focus {
+    background: #d94f70;
+    color: white;
+    outline: none;
+  }
+  
+  .photo img {
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
     object-fit: cover;
-}
-
-/* Compétences */
-.skills-container {
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(217,79,112,0.25);
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    padding: 60px 40px;
+    background: #fce4ec;
+    text-align: center;
+  }
+  
+  .skills-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 48px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    padding: 40px 20px;
-    background-color: #333;
-}
-
-.skills-section {
-    flex: 1;
-    max-width: 400px;
-    min-width: 250px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.skills-section h2 {
-    border-bottom: 3px solid #1f2833;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-}
-
-.skills-list {
+    gap: 32px;
+  }
+  
+  .card {
+    background: white;
+    padding: 28px 24px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+  
+  .card:hover,
+  .card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(217,79,112,0.3);
+  }
+  
+  .card h3 {
+    color: #d94f70;
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  
+  .card ul {
     list-style: none;
     padding: 0;
-}
-
-.skills-list li {
-    background-color: #333;
-    color: palevioletred;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Footer */
+  footer {
+    background: #ffe4ec;
     text-align: center;
-}
-
-/* Pied de page */
-footer {
-    background-color: #1f2833;
-    color: #c5c6c7;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer a {
-    color: palevioletred;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #ffffff;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        display: none;
+    padding: 28px 20px;
+    font-size: 1rem;
+    color: #555;
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 #f0c1d3;
+  }
+  
+  footer a {
+    color: #d94f70;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover,
+  footer a:focus {
+    color: #b8405a;
+    text-decoration: underline;
+    outline: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #ffe4ec;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 180px;
     }
-
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
     #btn {
-        display: block;
+      display: block;
     }
-
-    .s-container {
-        flex-direction: column;
-        text-align: center;
+  
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
     }
-
-    .skills-container {
-        flex-direction: column;
+  
+    .hero-buttons {
+      justify-content: center;
     }
-}
-
+  
+    .photo img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

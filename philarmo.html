@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio de Lina</title>
+  <title>Philharmonie de Paris – Portfolio de Lina</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #f8f8f8;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -72,6 +71,7 @@
     .description {
       font-size: 1rem;
       line-height: 1.6;
+      color: #333;
     }
 
     main {
@@ -84,6 +84,9 @@
 
     .project-image {
       width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 1.5rem;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
@@ -94,7 +97,6 @@
       color: white;
       padding: 1rem;
       border-radius: 10px;
-      margin-top: 1.5rem;
       font-size: 1rem;
       line-height: 1.5;
     }
@@ -138,9 +140,11 @@
         <div class="tags">
           <span class="pill">Design</span>
           <span class="pill">Dev</span>
+          <span class="pill">Figma</span>
+          <span class="pill">Git</span>
         </div>
         <p class="description">
-          J'ai créé ce site durant mon stage. Il utilise du JavaScript, du HTML et du CSS.
+          Projet de groupe autour du site de la Philharmonie de Paris. Réalisé en HTML, CSS, JavaScript avec gestion du code sur GitHub.
         </p>
       </section>
     </div>
@@ -148,12 +152,17 @@
 
   <main class="wrapper">
     <article class="content">
-      <img src="lpl.png" alt="Aperçu du projet" class="project-image" />
+      <img src="philarmo.png" alt="Page du site Philharmonie" class="project-image" />
       <p class="izan">
-        J'ai créé ce site durant mon stage de deux mois au Laboratoire de Physique des Lasers.
-        Il présente les activités, réalisations, rapports et conférences du laboratoire,
-        avec un système d'authentification permettant aux membres de modifier ou d’ajouter du contenu.
-      </p>
+        Dans le cadre d’un travail collaboratif, j’ai contribué à la réalisation d’un site autour de la <strong>Philharmonie de Paris</strong>.<br><br>
+         La maquette a été conçue sur <strong>Figma</strong>, en respectant l’identité visuelle du musée.<br>
+         J’ai participé au développement des pages en <strong>HTML, CSS et JavaScript</strong>.<br>
+         Le suivi de version s’est fait via <strong>Git</strong>, à la fois en ligne de commande et avec GitHub Desktop.<br>
+         Une bonne coordination et une entraide constante ont permis d’aboutir à un projet cohérent et fonctionnel.
+         <a href="https://github.com/linamedani/site_mus-e" target="_blank" style="color: white; text-decoration: underline;">Voir le site</a> | 
+        <a href="https://github.com/linamedani/site_mus-e" target="_blank" style="color: white; text-decoration: underline;">Code source</a>
+    </p>
+    
     </article>
   </main>
 

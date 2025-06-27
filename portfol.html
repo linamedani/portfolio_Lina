@@ -1,138 +1,166 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Lina</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-       body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio de Lina</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-.wrapper {
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
+    .wrapper {
+      max-width: 900px;
+      width: 100%;
+      padding: 2rem;
+      margin: 0 auto;
+    }
 
-header {
-    padding-bottom: 2.5rem;
-    background-color: whitesmoke;
-    border-bottom: 4px solid palevioletred;
-}
+    header {
+      background-color: #fff;
+      border-bottom: 4px solid palevioletred;
+      padding: 1.5rem 0;
+    }
 
-.back-link {
-    display: inline-block;
-    text-decoration: none;
-    color:#333;
-    font-size: 16px;
-}
-
-.back-link i {
-    margin-right: 5px;
-   
-}
-
-.details {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.tags {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.pill {
-    padding: 5px 10px;
-    background-color: palevioletred;
-    color: whitesmoke;
-    border-radius: 20px;
-}
-p{color: #333;}
-.description {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.content {
-    margin-top: 20px;
-    margin-left: 50px;
-    margin-right: 65px;
-}
-
-.project-image {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 8px;
-    height: 200%;
-    min-height: 200%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-p.izan{
-    color: whitesmoke;
-}
-@media (min-width: 768px) {
     .back-link {
-        display: inline-block;
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: palevioletred;
+    }
+
+    .back-link i {
+      margin-right: 8px;
     }
 
     .details {
-        flex-direction: row;
-        gap: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
     }
 
     .pill {
-        font-size: 14px;
+      padding: 6px 12px;
+      background-color: palevioletred;
+      color: white;
+      border-radius: 20px;
+      font-size: 0.9rem;
     }
-}
 
-    </style>
+    .description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+
+    .content {
+      margin-top: 2rem;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 1.5rem;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    .izan {
+      background-color: palevioletred;
+      color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #ffe4ec;
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+      box-shadow: inset 0 1px 0 #f0c1d3;
+    }
+
+    footer a {
+      color: #d94f70;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .details {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .description {
+        max-width: 60%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="wrapper">
-            <a class="back-link" href="index.html"><i class="fas fa-arrow-left"></i> Retour</a>
-            <Hero title="Titre du projet" align="start">
-                <div class="details">
-                    <div class="tags">
-                        <span class="pill">Design</span>
-                        <span class="pill">Dev</span>
-                    </div>
-                    <p class="description"> Ce site présente mon portfolio où j'ai mis tous mes projets.
-                    </p>
-                </div>
-            </Hero>
+  <header>
+    <div class="wrapper">
+      <a class="back-link" href="index.html"><i class="fas fa-arrow-left"></i>Retour</a>
+      <section class="details">
+        <div class="tags">
+          <span class="pill">Design</span>
+          <span class="pill">Dev</span>
         </div>
-    </header>
+        <p class="description">
+          Ce site présente mon portfolio avec les projets réalisés durant mes études en DUT Informatique.
+        </p>
+      </section>
+    </div>
+  </header>
 
-    <main class="wrapper">
-        <div class="stack gap-10 content">
-            <img src="por.png" alt="Projet 1" class="project-image">
-            <div class="content">
-                <!-- Contenu du projet -->
-                <p class="izan">J'ai réalisé ce site pour présenter les différents projets que j'ai accomplis durant mes deux ans de formation en DUT informatique.</p>
-               
-        </div>
-    </main>
+  <main class="wrapper">
+    <article class="content">
+      <img src="por.png" alt="Capture d'écran du portfolio" class="project-image" />
+      <p class="izan">
+        J'ai réalisé ce site pour présenter les différents projets que j'ai accomplis durant mes trois ans de formation en BUT Informatique.
+      </p>
+    </article>
+  </main>
 
-    <footer>
-        <ContactCTA />
-    </footer>
-</body>
+  <footer>
+    <a href="https://www.linkedin.com/in/lina-medani-5427a3271/" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/linamedani" target="_blank">GitHub</a>
+  </footer>
 </body>
 </html>

@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio de Lina</title>
+  <title>Ardoise Magique – Portfolio de Lina</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #f8f8f8;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -72,6 +71,7 @@
     .description {
       font-size: 1rem;
       line-height: 1.6;
+      color: #333;
     }
 
     main {
@@ -84,6 +84,9 @@
 
     .project-image {
       width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 1.5rem;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
@@ -94,7 +97,6 @@
       color: white;
       padding: 1rem;
       border-radius: 10px;
-      margin-top: 1.5rem;
       font-size: 1rem;
       line-height: 1.5;
     }
@@ -116,6 +118,7 @@
     footer a:hover {
       text-decoration: underline;
     }
+
     @media (min-width: 768px) {
       .details {
         flex-direction: row;
@@ -136,11 +139,12 @@
       <a class="back-link" href="index.html"><i class="fas fa-arrow-left"></i>Retour</a>
       <section class="details">
         <div class="tags">
-          <span class="pill">Design</span>
-          <span class="pill">Dev</span>
+          <span class="pill">Java</span>
+          <span class="pill">Eclipse</span>
+          <span class="pill">Travail d'équipe</span>
         </div>
         <p class="description">
-          J'ai créé ce site durant mon stage. Il utilise du JavaScript, du HTML et du CSS.
+          Projet en Java développé en groupe. Application "Ardoise Magique" avec interface graphique, classes abstraites, héritage, interface, et gestion d’événements.
         </p>
       </section>
     </div>
@@ -148,11 +152,15 @@
 
   <main class="wrapper">
     <article class="content">
-      <img src="lpl.png" alt="Aperçu du projet" class="project-image" />
+      <img src="java.png" alt="Projet Ardoise Magique" class="project-image" />
       <p class="izan">
-        J'ai créé ce site durant mon stage de deux mois au Laboratoire de Physique des Lasers.
-        Il présente les activités, réalisations, rapports et conférences du laboratoire,
-        avec un système d'authentification permettant aux membres de modifier ou d’ajouter du contenu.
+        Ce projet a été réalisé en groupe dans le cadre d’un exercice sur la programmation orientée objet en Java.<br><br>
+        L’objectif était de créer une <strong>ardoise interactive</strong> permettant de dessiner à l’écran avec divers outils. Nous avons travaillé sur les spécifications ensemble pour bien définir les fonctionnalités clés à intégrer.<br><br>
+        Le projet a été codé sous <strong>Eclipse</strong>, en utilisant des <strong>classes abstraites</strong>, l’<strong>héritage</strong> et des <strong>interfaces</strong>. L’interface graphique permettait d’interagir avec la souris pour dessiner, effacer ou changer d’outil.<br><br>
+        Une bonne <strong>organisation d’équipe</strong> et des échanges réguliers ont été essentiels pour structurer le travail et livrer une application fonctionnelle.
+        <!-- Liens -->
+        <br><br>
+        <a href="https://github.com/linamedani/TracesBUT1INF/tree/f9e487833a4b5ae8524945bb39468cca619895ba/R%C3%A9aliser%20un%20d%C3%A9veloppement%20d'application" target="_blank" style="color: white; text-decoration: underline;">Code source</a>
       </p>
     </article>
   </main>

@@ -1,477 +1,362 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes projets | Lina</title>
-    <link rel="stylesheet" href="styles.css">
-   
-    <style>
-        /* Styles de base */
-/* Styles de base */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #333; /* Couleur de fond générale */
-    color: #333; /* Couleur du texte principal */
-    line-height: 1.6;
-}
-h1{
-    font-family: 'Montserrat', sans-serif;
-    color: palevioletred;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes projets | Lina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff8f9;
+      color: #333;
+    }
 
-header {
-    background-color: #1f2833;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    header {
+      background: #ffe4ec;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 8px rgba(217,79,112,0.15);
+      z-index: 1000;
+    }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around; /* Ajustement pour centrer les éléments */
-}
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #d94f70;
+    }
 
-header nav ul li {
-    margin: 0;
-}
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
 
-header nav ul li a {
-    color: #c5c6c7;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: color 0.3s;
-}
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
 
-header nav ul li a:hover {
-    color: #ffffff;
-}
+    nav a:hover {
+      background: #d94f70;
+      color: white;
+    }
 
-.stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrer les éléments verticalement */
-}
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-.gap-20 {
-    gap: 20px; /* Espacement entre les éléments empilés */
-}
+    h1, h2, h3 {
+      color: #d94f70;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-.wrapper {
-    max-width: 1200px; /* Largeur maximale pour le contenu principal */
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-section#hero {
-    text-align: center;
-    padding: 40px 0;
-   
-    color: #ffffff;
-}
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
 
-section#grid {
-    padding: 40px 0;
-    
-}
+    .card:hover {
+      transform: translateY(-6px);
+    }
 
-.portfolio-grid {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajustement de la taille minimale et maximale des cartes */
-    gap: 20px;
-    justify-content: center; /* Centrer la grille horizontalement */
-}
-a{
-    color: whitesmoke;
-}
-.portfolio-grid li {
-    margin: 0;
-}
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
 
-.card {
-    position: relative;
-    height: 300px; /* Hauteur des cartes ajustée */
-    width: 100%; /* Largeur des cartes ajustée à 100% */
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: box-shadow 0.3s;
-}
+    .card .title {
+      padding: 16px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #d94f70;
+    }
 
-.card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+    .card .title a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .podcast-block {
+      margin-bottom: 50px;
+    }
 
-.card .title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le titre */
-    color: #ffffff;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 1.2rem;
-    text-align: center;
-}
+    .podcast-media {
+      text-align: center;
+      margin-bottom: 16px;
+    }
 
-.contact-cta {
-  
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-}
+    .podcast-cover {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
 
-.contact-cta a {
-    color: palevioletred;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+    audio {
+      width: 100%;
+      max-width: 800px;
+      margin: 10px 0;
+    }
 
-.contact-cta a:hover {
-    color: #ffffff;
-}
+    .btn-show-description {
+      background: #d94f70;
+      color: white;
+      font-weight: 600;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
 
-footer {
-    background-color: #1f2833;
-    color: #c5c6c7;
-    text-align: center;
-    padding: 20px 0;
-}
+    .btn-show-description:hover {
+      background: #b8405a;
+    }
 
-footer a {
-    color: palevioletred;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+    .hidden {
+      display: none;
+      background: #fff0f4;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
 
-footer a:hover {
-    color: #ffffff;
-}
-.podcast-media {
-    display: flex;
-    align-items: center; /* Aligne l'image et les audios au centre verticalement */
-    gap: 60px; /* Espace entre l'image et les audios */
-}
-h6{
-    color: palevioletred;
-    font-size: 1.6rem;
-}
+    footer {
+      background: #ffe4ec;
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+      box-shadow: inset 0 1px 0 #f0c1d3;
+    }
 
-.podcast-cover {
-    width: 300px; /* Ajuste la taille de l'image */
-    height: auto;
-}
+    footer a {
+      color: #d94f70;
+      text-decoration: none;
+      margin: 0 10px;
+    }
 
-.podcast-audios {
-    display: flex;
-    flex-direction: column; /* Les lecteurs audio sont empilés verticalement */
-    gap: 10px; /* Espace entre les lecteurs audio */
-}
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-.podcast-audio {
-    width: 350px; /* Ajuste la largeur des lecteurs audio */
-}
+    .contact-cta {
+      text-align: center;
+      margin: 40px 0;
+    }
 
+    .contact-cta a {
+      background: #d94f70;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
+    .contact-cta a:hover {
+      background: #b8405a;
+    }
 
-
-
-h1{
-    color: #ffffff;
-}
-
-
-
-/* Style pour le bouton */
-.btn-show-description {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: palevioletred;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
+    @media screen and (max-width: 600px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: white;
+  margin-left: 8px;
+  vertical-align: middle;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.btn-show-description:hover {
-    background-color: #d36e6e;
+/* Couleurs selon le BUT */
+.badge-but1 {
+  background-color: #d94f70; /* rose vif */
 }
 
-/* Masquer la description et les sources au début */
-.hidden {
-    display: none;
+.badge-but2 {
+  background-color: #4a90e2; /* bleu */
 }
 
-#podcast-description {
-    text-align: left;
-    margin-top: 20px;
-    font-size: 1.1rem;
-}
-#podcast-description2 {
-    text-align: left;
-    margin-top: 20px;
-    font-size: 1.1rem;
-    margin-left: 60px;
+.badge-but3 {
+  background-color: #f5a623; /* orange */
 }
 
-#podcast-description h3 {
-    font-size: 1.8rem;
-    color: palevioletred;
-    margin-bottom: 10px;
-}
-
-#podcast-description h4 {
-    font-size: 1.4rem;
-    color: rgb(240, 190, 206);
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-#podcast-description p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-/* Styles pour cacher la description par défaut */
-#podcast-description.hidden {
-    display: none;
-}
-
-/* Styles pour afficher la description lorsque le bouton est cliqué */
-#podcast-description:not(.hidden) {
-    display: block;
-}
-#podcast-description p,h4{
-    color: #ffffff;
-}
-#podcast-description2 h3 {
-    font-size: 1.8rem;
-    color: palevioletred;
-    margin-bottom: 10px;
-}
-
-#podcast-description2 h4 {
-    font-size: 1.4rem;
-    color: rgb(240, 190, 206);
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-#podcast-description2 p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-/* Styles pour cacher la description par défaut */
-#podcast-description2.hidden {
-    display: none;
-}
-
-/* Styles pour afficher la description lorsque le bouton est cliqué */
-#podcast-description2:not(.hidden) {
-    display: block;
-}
-#podcast-description2 p,h4{
-    color: #ffffff;
-}
-
-
-
-
-    </style>
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html">Compétences</a></li>
-                <li><a href="Mesprojets.html">Mes projets</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="stack gap-20">
-        <main class="wrapper stack gap-8">
-            <section id="hero">
-                <div class="hero-content">
-                    <h1>Mes projets</h1>
-                    <p>Découvrez ci-dessous les sites que j'ai réalisés</p>
-                </div>
-            </section>
+  <header>
+    <div class="logo">Lina</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html">Compétences</a></li>
+        <li><a href="Mesprojets.html">Mes projets</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <section id="grid">
-                <ul class="portfolio-grid">
-                    <li>
-                        <a href="#">
-                            <div class="card">
-                                <span class="title"><a href="iut.html">Site IUT</a></span>
-                                <img src="iut.png" alt="Site iut">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="card">
-                                <span class="title"><a href="lpl.html">Site LPL</a></span>
-                                <img src="lpl.png" alt="Image Lpl">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="card">
-                                <span class="title"><a href="perf.html">Site Perform Vision</a></span>
-                                <img src="perform.png" alt="Site perform vision">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="card">
-                                <span class="title"><a href="portfol.html">Portfolio</a></span>
-                                <img src="por.png" alt="Image portfolio">
-                            </div>
-                        </a>
-                    </li>
-                    
-                </ul>
-            </section>
-            <h1>Mes Podcasts</h1>
-            <h6>L'info à l'antenne - Ep1 Comment les cyberattaques et l'IA sont utilisées comme armes de guerre ?
-            </h6>
-            <section id="podcast">
-                
-            
-                
-                
-            
-               <!-- Conteneur de l'image et des lecteurs audio -->
-<div class="podcast-media">
-    <!-- Image de couverture -->
-    <img src="miniature.webp" alt="Image de couverture du podcast" class="podcast-cover">
+  <main>
+    <section class="hero">
+      <h1>Mes projets</h1>
+      <p> Bienvenue dans mon univers digital, où chaque projet raconte une histoire ! </p>
+    </section>
+
+    <section class="portfolio">
+      <ul class="portfolio-grid">
+        <li class="card">
+          <img src="iut.png" alt="Site IUT">
+          <div class="title"><a href="iut.html">Site IUT</a><span class="badge badge-but2">BUT2</span></div>
+          
+        </li>
+        <li class="card">
+          <img src="lpl.png" alt="Site LPL">
+          <div class="title"><a href="lpl.html">Site LPL</a><span class="badge badge-but2">BUT2</span></div>
+        </li>
+        <li class="card">
+          <img src="perform.png" alt="Site Perform Vision">
+          <div class="title"><a href="perf.html">Site Perform Vision</a><span class="badge badge-but2">BUT2</span></div>
+        </li>
+        <li class="card">
+          <img src="por.png" alt="Portfolio">
+          <div class="title"><a href="portfol.html">Portfolio</a><span class="badge badge-but1">BUT1</span></div>
+        </li>
+      <li class="card">
+        <img src="philarmo.png" alt="Philharmonie de Paris">
+        <div class="title"><a href="philarmo.html">Site Philharmonie de Paris</a><span class="badge badge-but1">BUT1</span></div>
+      </li>
+      <li class="card">
+        <img src="java.png" alt="Ardoise magique">
+        <div class="title"><a href="ardoise.html">Ardoise magique (projet en Java)</a><span class="badge badge-but1">BUT1</span></div>
+      </li>
+      <li class="card">
+        <img src="select.png" alt="Sélecteur de pays">
+        <div class="title"><a href="selecteur.html">Sélecteur de pays</a><span class="badge badge-but3">BUT3</span></div>
+      </li>
+      <li class="card">
+        <img src="audit.png" alt="audit">
+        <div class="title"><a href="audit.html">Audit des projets</a><span class="badge badge-but3">BUT3</span></div>
+      </li>
+      <li class="card">
+        <img src="stage.png" alt="stage">
+        <div class="title"><a href="stage.html">Bilan de stage</a><span class="badge badge-but3">BUT3</span></div>
+      </li>
+
+
+      </ul>
+    </section>
+
+    <section class="podcast-block">
+      <h2>Podcast 1 : L'info à l'antenne</h2>
+      <div class="podcast-media">
+        <img src="miniature.webp" alt="Podcast 1" class="podcast-cover" />
+        <audio controls src="l_info_a_l_antenne_ep1_partie1.wav"></audio>
+        <audio controls src="l_info_a_l_antenne_ep1_partie2.wav"></audio>
+        <audio controls src="l_info_a_l_antenne_ep1_partie3.wav"></audio>
+        <audio controls src="l_info_a_l_antenne_ep1_partie_4.wav"></audio>
+      </div>
+      <button class="btn-show-description" onclick="toggleDescription('desc1')">Voir la description</button>
+      <div id="desc1" class="hidden">
+        <h3>Cyberattaques et Intelligence Artificielle dans les Conflits Modernes</h3>
+
+        <!-- Introduction -->
+        <p>Dans ce podcast, Manon GLAUDE la présentatrice, est accompagnée de quatre experts : Hiba OUMSID chroniqueuse et journaliste en cybersécurité, Sidi ESSAADOUNI, pentesteur, Nour Elhouda BOUAMLAT, journaliste spécialisée en intelligence artificielle, et Lina MEDANI experte en IA. Ensemble, nous discutons de l'impact de ces nouvelles formes de guerre, apportant des exemples concrets et des réflexions sur l’avenir de la cybersécurité et de la régulation.</p>
     
-    <!-- Lecteurs audio -->
-    <div class="podcast-audios">
-        <audio controls class="podcast-audio">
-            <source src="l_info_a_l_antenne_ep1_partie1.wav" type="audio/wav">
-            Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-        <audio controls class="podcast-audio">
-            <source src="l_info_a_l_antenne_ep1_partie2.wav" type="audio/wav">
-            Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-        <audio controls class="podcast-audio">
-            <source src="l_info_a_l_antenne_ep1_partie3.wav" type="audio/wav">
-            Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-        <audio controls class="podcast-audio">
-            <source src="l_info_a_l_antenne_ep1_partie_4.wav" type="audio/wav">
-            Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-    </div>
-</div>
+        <!-- Sous-section Introduction des concepts clés -->
+        <h4>Introduction des concepts clés</h4>
+        <p>Nous commençons par définir les termes “cyberattaque” et “intelligence artificielle”. Une cyberattaque, selon IBM, est un acte visant à voler, modifier ou détruire des données via un accès non autorisé à un réseau. Quant à l’IA, elle désigne la capacité d’une machine à imiter les comportements humains, comme le raisonnement et la planification, selon le parlement Européen.</p>
+    
+        <!-- Sous-section Les cyberattaques comme armes de guerre -->
+        <h4>Les cyberattaques comme armes de guerre</h4>
+        <p>Hiba nous parle de l’attaque MOVEit en 2023, un exemple frappant de cyberattaque à grande échelle. Cette attaque a exploité une faille dans un logiciel de transfert de fichiers, permettant à des cybercriminels de dérober des données sensibles dans des secteurs vitaux. Sidi ajoute une dimension technique à cet incident, expliquant comment une telle vulnérabilité a pu perturber des infrastructures critiques.</p>
+    
+        <!-- Sous-section L'IA dans la guerre cognitive -->
+        <h4>L'IA dans la guerre cognitive</h4>
+        <p>Nour nous expose comment l’IA est utilisée dans la guerre cognitive, notamment à travers des Deepfakes. Elle évoque l’exemple d’une vidéo truquée de Volodymyr Zelensky en mars 2022, dans laquelle il appelait ses soldats à se rendre, mais qui, en réalité, était manipulée par des hackers pour semer le chaos. Lina, quant à elle, nous explique comment des Deepfakes sont créés à l’aide de GANs (réseaux antagonistes génératifs), rendant difficile la détection des manipulations.</p>
+    
+        <!-- Sous-section Débat sur la régulation et les stratégies de cybersécurité -->
+        <h4>Débat sur la régulation et les stratégies de cybersécurité</h4>
+        <p>Nous débattons ensuite de la régulation des cyberattaques par le droit international. Bien qu’il existe des principes de bases, comme ceux concernant la guerre et la souveraineté des États, la législation reste en retard, notamment concernant l’usage de l’IA dans les attaques. Nous explorons également les stratégies de cybersécurité : prévention, détection et réponse aux incidents. Sidi met l'accent sur l’importance des tests d'intrusion réguliers et de la coopération internationale pour mieux se préparer aux menaces.</p>
+    
+        <!-- Sous-section Propositions pour prévenir et atténuer les cyberattaques -->
+        <h4>Propositions pour prévenir et atténuer les cyberattaques</h4>
+        <p>Enfin, nous réfléchissons ensemble à des stratégies pour atténuer l’impact des cyberattaques. Lina propose de renforcer l’utilisation de l’IA pour la détection en temps réel, tandis que Nour insiste sur la sensibilisation et la coopération internationale. Hiba plaide pour un renforcement des lois et de la coopération entre États, et Sidi nous rappelle l’importance des tests d’intrusion et de la mise en place de bases de données communes pour mieux se défendre.</p>
+    
+        <!-- Sous-section Conclusion -->
+        <h4>Conclusion</h4>
+        <p>Nous concluons cet épisode en ouvrant la discussion sur le rôle des grandes entreprises privées comme Amazon et Palantir dans la course aux technologies militaires et l'intelligence artificielle. Nous remercions nos invités et nos auditeurs, et nous invitons tout le monde à rester à l'écoute pour nos prochains épisodes.</p>
 
-            
-                <!-- Bouton pour afficher la description -->
-                <button class="btn-show-description" onclick="toggleDescription()">Cliquez pour voir la description du podcast</button>
-            
-                <!-- Contenu caché de la description et des sources -->
-                <div id="podcast-description" class="hidden">
-                    <h3>Cyberattaques et Intelligence Artificielle dans les Conflits Modernes</h3>
+        <h4>Sources consultées :</h4>
+        <ul>
+            <li><a href="https://www.ibm.com/fr-fr/topics/cyber-attack" target="_blank">Définition de cyberattaque</a></li>
+            <li><a href="https://www.europarl.europa.eu/topics/fr/article/20200827STO85804/intelligence-artificielle-definition-et-utilisation" target="_blank">Définition de l'IA</a></li>
+            <li><a href="https://www.france24.com/fr/émissions/l-entretien-de-l-intelligence-économique/20241126-hyperguerre-comment-l-ia-révolutionne-la-guerre" target="_blank">Concept d'intelligentisation et d'hyperguerre</a></li>
+            <li><a href="https://orx.org/resource/moveit-transfer-data-breaches#:~:text=Cl0p%2C%20the%20notorious%20Russian,MOVEit%20databases%20since%20July%202021" target="_blank">Attaque Move-it </a></li>
+            <li><a href="https://www.bitdefender.com/en-us/blog/hotforsecurity/deepfake-president-zelensky-calls-on-ukraine-to-surrender-as-tv-station-hacked" target="_blank">Article Deepfake Zelensky</a></li>
+            <li><a href="https://news.sky.com/story/ukraine-war-deepfake-video-of-zelenskyy-telling-ukrainians-to-lay-down-arms-debunked-12567789#:~:text=Enable%20Cookies%20Allow%20Cookies%20Once" target="_blank">vidéo Deepfake Zelensky</a></li>
+            <li><a href="https://www.instagram.com/p/CbKYM_Zg2jo/" target="_blank">vidéo Instagram Deepfake Zelensky</a></li>
 
-                    <!-- Introduction -->
-                    <p>Dans ce podcast, Manon GLAUDE la présentatrice, est accompagnée de quatre experts : Hiba OUMSID chroniqueuse et journaliste en cybersécurité, Sidi ESSAADOUNI, pentesteur, Nour Elhouda BOUAMLAT, journaliste spécialisée en intelligence artificielle, et Lina MEDANI experte en IA. Ensemble, nous discutons de l'impact de ces nouvelles formes de guerre, apportant des exemples concrets et des réflexions sur l’avenir de la cybersécurité et de la régulation.</p>
-                
-                    <!-- Sous-section Introduction des concepts clés -->
-                    <h4>Introduction des concepts clés</h4>
-                    <p>Nous commençons par définir les termes “cyberattaque” et “intelligence artificielle”. Une cyberattaque, selon IBM, est un acte visant à voler, modifier ou détruire des données via un accès non autorisé à un réseau. Quant à l’IA, elle désigne la capacité d’une machine à imiter les comportements humains, comme le raisonnement et la planification, selon le parlement Européen.</p>
-                
-                    <!-- Sous-section Les cyberattaques comme armes de guerre -->
-                    <h4>Les cyberattaques comme armes de guerre</h4>
-                    <p>Hiba nous parle de l’attaque MOVEit en 2023, un exemple frappant de cyberattaque à grande échelle. Cette attaque a exploité une faille dans un logiciel de transfert de fichiers, permettant à des cybercriminels de dérober des données sensibles dans des secteurs vitaux. Sidi ajoute une dimension technique à cet incident, expliquant comment une telle vulnérabilité a pu perturber des infrastructures critiques.</p>
-                
-                    <!-- Sous-section L'IA dans la guerre cognitive -->
-                    <h4>L'IA dans la guerre cognitive</h4>
-                    <p>Nour nous expose comment l’IA est utilisée dans la guerre cognitive, notamment à travers des Deepfakes. Elle évoque l’exemple d’une vidéo truquée de Volodymyr Zelensky en mars 2022, dans laquelle il appelait ses soldats à se rendre, mais qui, en réalité, était manipulée par des hackers pour semer le chaos. Lina, quant à elle, nous explique comment des Deepfakes sont créés à l’aide de GANs (réseaux antagonistes génératifs), rendant difficile la détection des manipulations.</p>
-                
-                    <!-- Sous-section Débat sur la régulation et les stratégies de cybersécurité -->
-                    <h4>Débat sur la régulation et les stratégies de cybersécurité</h4>
-                    <p>Nous débattons ensuite de la régulation des cyberattaques par le droit international. Bien qu’il existe des principes de bases, comme ceux concernant la guerre et la souveraineté des États, la législation reste en retard, notamment concernant l’usage de l’IA dans les attaques. Nous explorons également les stratégies de cybersécurité : prévention, détection et réponse aux incidents. Sidi met l'accent sur l’importance des tests d'intrusion réguliers et de la coopération internationale pour mieux se préparer aux menaces.</p>
-                
-                    <!-- Sous-section Propositions pour prévenir et atténuer les cyberattaques -->
-                    <h4>Propositions pour prévenir et atténuer les cyberattaques</h4>
-                    <p>Enfin, nous réfléchissons ensemble à des stratégies pour atténuer l’impact des cyberattaques. Lina propose de renforcer l’utilisation de l’IA pour la détection en temps réel, tandis que Nour insiste sur la sensibilisation et la coopération internationale. Hiba plaide pour un renforcement des lois et de la coopération entre États, et Sidi nous rappelle l’importance des tests d’intrusion et de la mise en place de bases de données communes pour mieux se défendre.</p>
-                
-                    <!-- Sous-section Conclusion -->
-                    <h4>Conclusion</h4>
-                    <p>Nous concluons cet épisode en ouvrant la discussion sur le rôle des grandes entreprises privées comme Amazon et Palantir dans la course aux technologies militaires et l'intelligence artificielle. Nous remercions nos invités et nos auditeurs, et nous invitons tout le monde à rester à l'écoute pour nos prochains épisodes.</p>
-            
-                    <h4>Sources consultées :</h4>
-                    <ul>
-                        <li><a href="https://www.ibm.com/fr-fr/topics/cyber-attack" target="_blank">Définition de cyberattaque</a></li>
-                        <li><a href="https://www.europarl.europa.eu/topics/fr/article/20200827STO85804/intelligence-artificielle-definition-et-utilisation" target="_blank">Définition de l'IA</a></li>
-                        <li><a href="https://www.france24.com/fr/émissions/l-entretien-de-l-intelligence-économique/20241126-hyperguerre-comment-l-ia-révolutionne-la-guerre" target="_blank">Concept d'intelligentisation et d'hyperguerre</a></li>
-                        <li><a href="https://orx.org/resource/moveit-transfer-data-breaches#:~:text=Cl0p%2C%20the%20notorious%20Russian,MOVEit%20databases%20since%20July%202021" target="_blank">Attaque Move-it </a></li>
-                        <li><a href="https://www.bitdefender.com/en-us/blog/hotforsecurity/deepfake-president-zelensky-calls-on-ukraine-to-surrender-as-tv-station-hacked" target="_blank">Article Deepfake Zelensky</a></li>
-                        <li><a href="https://news.sky.com/story/ukraine-war-deepfake-video-of-zelenskyy-telling-ukrainians-to-lay-down-arms-debunked-12567789#:~:text=Enable%20Cookies%20Allow%20Cookies%20Once" target="_blank">vidéo Deepfake Zelensky</a></li>
-                        <li><a href="https://www.instagram.com/p/CbKYM_Zg2jo/" target="_blank">vidéo Instagram Deepfake Zelensky</a></li>
+        </ul>
+      </div>
+    </section>
 
-                    </ul>
-                </div>
-            </section>
-            <h6>Cybersécurité : Sommes-nous réellement protégés ?</h6>
-<section id="podcast">
-    <div class="podcast-media">
-        <img src="min.webp" alt="Image de couverture du podcast" class="podcast-cover">
-       
-            <audio controls class="podcast-audio">
-                <source src="podcast2.mp4" type="audio/mp4">
-                Votre navigateur ne supporte pas l'élément audio.
-            </audio>
-            
-        </div>
-    </div>
-    <button class="btn-show-description" onclick="toggleDescription2()">Cliquez pour voir la description du podcast</button>
-    <div id="podcast-description2" class="hidden">
-        <!-- Description du deuxième podcast -->
-       <!-- Description du premier podcast -->
-        
+    <section class="podcast-block">
+      <h2>Podcast 2 : Cybersécurité, sommes-nous protégés ?</h2>
+      <div class="podcast-media">
+        <img src="min.webp" alt="Podcast 2" class="podcast-cover" />
+        <audio controls src="podcast2.mp4"></audio>
+      </div>
+      <button class="btn-show-description" onclick="toggleDescription('desc2')">Voir la description</button>
+      <div id="desc2" class="hidden">
+        <!-- Insère ici ton texte descriptif complet -->
         <p>Dans cet épisode, Chemsedine Benhaddou reçoit plusieurs experts pour discuter des enjeux de la cybersécurité et des cyberattaques, un sujet d'actualité qui menace aussi bien les individus que les entreprises. Aux côtés de :</p>
-
-
         <h4>Loïc Li, expert en protection informatique</h4>
         <p>Loïc Li met en avant l’évolution des cyberattaques et les menaces majeures comme le phishing, les ransomwares, les attaques DDoS et les vulnérabilités Zero-Day. Il insiste sur la nécessité d’une vigilance accrue, de mises à jour régulières et d’une collaboration entre entreprises et autorités pour renforcer la cybersécurité face à des attaques de plus en plus sophistiquées.</p>
-
         <h4>Lina Medani, hackeuse éthique</h4>
         <p>Lina Medani partage des conseils sur la détection proactive des failles de sécurité. Elle met en garde contre les risques liés à l'ingénierie sociale et conseille de toujours vérifier l'authenticité des e-mails avant de cliquer sur des liens ou d'entrer des informations sensibles. Elle recommande également de tester régulièrement la sécurité de ses systèmes grâce à des outils de simulation d'attaque.</p>
         <h4>Azzedine Hatem, spécialiste en cybersécurité des entreprises</h4>
         <p>Azzedine Hatem commence par discuter des stratégies à mettre en place au sein des organisations pour prévenir les cyberattaques. Il souligne l'importance de la formation continue des employés, des tests de pénétration réguliers et de l'instauration de politiques de cybersécurité robustes.</p>
-
         <h4>Yanis Krim, victime d’une cyberattaque</h4>
         <p>Yanis Krim raconte son expérience personnelle. Il explique comment il a été piraté après avoir cliqué sur un lien malveillant dans un e-mail prétendant venir de sa banque, ce qui a conduit à la perte de plusieurs fonds. Yanis met en lumière la facilité avec laquelle les cybercriminels peuvent exploiter les faiblesses humaines et souligne l'importance d'une vigilance constante face aux cybermenaces.</p>
-
         <p>Le podcast se conclut avec un rappel sur la nécessité de prévenir, de coopérer à l'échelle internationale et de sensibiliser à la cybersécurité pour mieux se défendre contre les menaces.</p>
         <h4>Sources consultées :</h4>
                     <ul>
@@ -480,44 +365,25 @@ h1{
                         <li><a href="https://www.onelogin.com/fr-fr/learn/what-is-cyber-security" target="_blank">Comprendre la cybersécurité et la cyberattaque</a></li>
                         <li><a href="https://adess-france.fr/conseils-actualites/la-securite-informatique-un-enjeu-cruciel-dans-un-monde-numerique/?https://adess-france.fr/organismes-formation-securite/https://adess-france.fr/organismes-formation-securite/&gad_source=1&gclid=Cj0KCQiAz6q-BhCfARIsAOezPxlWMbWol3giANiXx3ns1PZ29vKiPqMOHfQ8O0z4N177y2zGbQ7PBkYaAh1nEALw_wcB" target="_blank">Types des menaces informatiques</a></li>
                         <li><a href="https://fr.wikipedia.org/wiki/Vuln%C3%A9rabilit%C3%A9_zero-day" target="_blank">Vulnérabilité Zero-Day </a></li>
-
-                    </ul>
-
+      
     </div>
-</section>
+    </section>
 
-            
-            
-            
-        </main>
-
-        <aside class="contact-cta">
-            <a href="mailto:medani.lina2004@gmail.com">Contactez-moi</a>
-        </aside>
+    <div class="contact-cta">
+      <a href="mailto:medani.lina2004@gmail.com">Contactez-moi</a>
     </div>
+  </main>
 
-    <footer>
-        <a href="https://www.linkedin.com/in/lina-medani-5427a3271/" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/linamedani" target="_blank">GitHub</a>
-    </footer>
-</body>
-<script>
-    function toggleDescription() {
-        var description = document.getElementById('podcast-description');
-        if (description.classList.contains('hidden')) {
-            description.classList.remove('hidden');  // Affiche la description
-        } else {
-            description.classList.add('hidden');  // Cache la description
-        }
+  <footer>
+    <a href="https://www.linkedin.com/in/lina-medani-5427a3271/" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/linamedani" target="_blank">GitHub</a>
+  </footer>
+
+  <script>
+    function toggleDescription(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
     }
-    function toggleDescription2() {
-        var description2 = document.getElementById('podcast-description2');
-        if (description2.classList.contains('hidden')) {
-            description2.classList.remove('hidden');
-        } else {
-            description2.classList.add('hidden');
-        }}
-</script>
-
-
+  </script>
+</body>
 </html>
