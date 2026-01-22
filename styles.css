@@ -134,6 +134,7 @@ body {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: none;
+    text-decoration: none;
   }
   
   .btn-secondary:hover,
